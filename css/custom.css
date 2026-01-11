@@ -1,0 +1,74 @@
+.home-banner-background img {
+    display: none !important;
+}
+
+.home-banner-background {
+    position: fixed !important;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+/* ===== Day ===== */
+.home-banner-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/day.png');
+    background-size: cover;
+    background-position: center -15%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* ===== Night ===== */
+.home-banner-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/night.png');
+    background-size: cover;
+    background-position: center -15%;
+    background-repeat: no-repeat;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* ===== Dark mode ===== */
+html.dark .home-banner-background::after,
+body.dark-mode .home-banner-background::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+html.dark .home-banner-background::before,
+body.dark-mode .home-banner-background::before {
+    opacity: 0;
+}
+
+/* ===== Light mode ===== */
+html.light .home-banner-background::after,
+body.light-mode .home-banner-background::after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+html.light .home-banner-background::before,
+body.light-mode .home-banner-background::before {
+    opacity: 1;
+}
+
+/* ===== Foreground ===== */
+.home-banner-container,
+.home-banner-main,
+.navbar-container {
+    position: relative;
+    z-index: 99;
+}
