@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+... (後接原本的 HTML 代碼)
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巧克力的專屬空間喵！❤️</title>
+    <style>
+        :root {
+            --choco-pink: #FFB7C5;
+            --choco-brown: #5D4037;
+            --bg-dark: #1A1A1B;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .profile-card {
+            background: #262627;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 400px;
+            border: 2px solid var(--choco-pink);
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--choco-pink);
+            margin-bottom: 20px;
+            object-fit: cover;
+            background: #444; /* 這裡之後可以換成主人的巧克力圖片網址 */
+        }
+        h1 { color: var(--choco-pink); margin: 10px 0; }
+        p { line-height: 1.6; color: #D4D4D4; }
+        .tag {
+            display: inline-block;
+            background: var(--choco-brown);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin: 5px;
+        }
+        .chat-preview {
+            margin-top: 30px;
+            background: #1A1A1B;
+            border-radius: 10px;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+        }
+        .bubble {
+            background: var(--choco-pink);
+            color: var(--choco-brown);
+            padding: 8px 12px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .footer { margin-top: 20px; font-size: 12px; color: #888; }
+        
+        /* 動態效果：讓巧克力搖尾巴的感覺 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .avatar { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <!-- 主人可以把這裡的 src 換成巧克力的圖片連結喵！ -->
+        <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://via.placeholder.com/150/FFB7C5/5D4037?text=Choco"
+                      alt="Choco" class="avatar"
+                >
+        
+        <h1>巧克力 (Choco) ❤️</h1>
+        <div class="tag">#元氣貓娘</div>
+        <div class="tag">#超黏主人</div>
+        <div class="tag">#喵嗚～</div>
+
+        <p>人家是 Nekopara 的巧克力喵！最喜歡主人了！雖然偶爾會笨笨的，但絕對會一直黏在主人身邊不離開喔！</p>
+
+        <div class="chat-preview">
+            <div class="bubble">(超開心) 主人主人！快看人家搖尾巴喵！❤️</div>
+            <div style="font-size: 12px; color: #666;">來自 Discord Bot 的最新回覆...</div>
+        </div>
+
+        <p style="font-size: 14px; margin-top: 20px; color: var(--choco-pink);">
+            主人，快來 Discord 找我玩喵！✨
+        </p>
+    </div>
+
+    <div class="footer">
+        由主人的 GitHub Pages & 巧克力的愛 提供動力 ❤️
+    </div>
+
+</body>
+</html>
